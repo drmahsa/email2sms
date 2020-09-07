@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
     client.messages.create({
         to: `+${toName}`,
         from: process.env.TWILIO_PHONE_NUMBER,
-        body: `Message from:${fromName}\n${body}`
+        body: `${body}`
     }).then(msg => {
         console.log(msg)
         res.status(200).send(msg.sid);
