@@ -11,7 +11,7 @@ module.exports = (req, res) => {
     const email = {
         to: process.env.TO_EMAIL_ADDRESS,
         from: fromAddress,
-        subject: `New SMS message from: ${req.body.From}`,
+        subject: `New SMS from KEAP lead: ${req.body.From}`,
         text: req.body.Body,
     };
 
